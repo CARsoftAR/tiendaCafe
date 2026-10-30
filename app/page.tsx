@@ -78,7 +78,8 @@ export default function Home() {
       origin: "ORIGEN: PANAMÁ - BOQUETE",
       price: 34500,
       description: "Edición de concurso. Notas ultra florales, papaya y miel silvestre.",
-      image: "https://images.unsplash.com/photo-1587049352847-4a222e784d38?w=800&q=80"
+      // Usamos la misma URL del producto 1 que carga al 100% sin fallas en tu sitio
+      image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80"
     },
     {
       id: 5,
@@ -382,8 +383,8 @@ export default function Home() {
                   key={filter.id}
                   onClick={() => setActiveFilter(filter.id)}
                   className={`px-5 py-2 rounded-xl text-xs font-mono uppercase tracking-wider transition cursor-pointer ${activeFilter === filter.id
-                      ? "bg-[#fbbf24] text-black font-bold shadow-[0_0_15px_rgba(251,191,36,0.3)]"
-                      : "bg-white/5 text-gray-300 border border-white/10 hover:bg-white/10"
+                    ? "bg-[#fbbf24] text-black font-bold shadow-[0_0_15px_rgba(251,191,36,0.3)]"
+                    : "bg-white/5 text-gray-300 border border-white/10 hover:bg-white/10"
                     }`}
                 >
                   {filter.label}
