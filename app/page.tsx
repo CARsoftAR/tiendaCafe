@@ -78,8 +78,7 @@ export default function Home() {
       origin: "ORIGEN: PANAMÁ - BOQUETE",
       price: 34500,
       description: "Edición de concurso. Notas ultra florales, papaya y miel silvestre.",
-      // Usamos la misma URL del producto 1 que carga al 100% sin fallas en tu sitio
-      image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80"
+      image: "https://images.unsplash.com/photo-1498804103079-a6351b050096?w=800&q=80"
     },
     {
       id: 5,
@@ -320,19 +319,20 @@ export default function Home() {
       {/* 1. SECCIÓN PORTADA (HERO) */}
       <section className="h-screen w-full flex items-center px-6 md:px-16 lg:px-24 pt-24 relative z-10 overflow-hidden">
 
-        <div className="absolute inset-0 z-0 overflow-hidden bg-black">
+        <div className="absolute inset-0 z-0 overflow-hidden bg-black" style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
           <video
             autoPlay
             loop
             muted
             playsInline
             className="w-full h-full object-cover opacity-75 scale-105 filter brightness-125 contrast-110 saturate-110"
+            style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }}
           >
             <source src="/cafe.mp4" type="video/mp4" />
             Tu navegador no soporta videos HTML5.
           </video>
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0c0a09] via-[#0c0a09]/90 to-transparent w-full lg:w-[75%] pointer-events-none"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0c0a09] via-transparent to-black/40 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0c0a09] via-[#0c0a09]/90 to-transparent w-full lg:w-[75%] pointer-events-none" style={{ position: 'absolute', inset: 0 }}></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0c0a09] via-transparent to-black/40 pointer-events-none" style={{ position: 'absolute', inset: 0 }}></div>
         </div>
 
         <div ref={heroTextRef} className="flex flex-col justify-center opacity-0 z-10 max-w-2xl pt-16">
